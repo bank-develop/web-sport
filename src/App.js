@@ -9,7 +9,6 @@ import basketballDesktop  from './asset/image/desktop/basketball-desktop.png'
 import rugbyDesktop  from './asset/image/desktop/rugby-desktop.png'
 
 import { useMediaQuery } from 'react-responsive';
-import MediaQuery from 'react-responsive'
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1313 });
