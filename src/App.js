@@ -1,4 +1,6 @@
 import './App.css';
+import React  from 'react';
+
 import rugbyMobile from './asset/image/mobile/rugby.png'
 import basketballMobile from './asset/image/mobile/basketball.png'
 import paginationBasketBall from './asset/image/mobile/pagination-basketbal.png'
@@ -7,8 +9,8 @@ import rugbyTablet  from './asset/image/tablet/rugby-tablet.png'
 import basketballTablet  from './asset/image/tablet/basketball-tablet.png'
 import basketballDesktop  from './asset/image/desktop/basketball-desktop.png'
 import rugbyDesktop  from './asset/image/desktop/rugby-desktop.png'
-
 import { useMediaQuery } from 'react-responsive';
+import Slider from './components/Slider';
 
 function App() {
   const isDesktop = useMediaQuery({ minWidth: 1313 });
@@ -56,6 +58,7 @@ const descBasketballPlayer = [
   
   return (
     <div className="App">
+      
       {/* <BasketballPlayer/>
       <RugbyPlayer /> */}
       <div className="container-app">
@@ -71,22 +74,9 @@ const descBasketballPlayer = [
           <div className='image-rugby'>
             <img src={rugbyMobile} alt="rugbyMobile" />
           </div>
-          <div className='container-desc'>
-            <div className='wrapper-title-desc'>
-              <div className="title-id">
-                {desRugbyPlayer[1].id}
-              </div>
-              <div className="title-desc">
-                {desRugbyPlayer[1].title}
-              </div>
-              </div>
-            <div className="desc">
-                {desRugbyPlayer[1].desc}
-            </div>
-          </div>
-          <div className="swiper">
-          <img src={paginationRugby} alt="paginationRugby" className='swiper-image' />
-          </div>
+          <Slider data={desRugbyPlayer}/>
+          <>
+          </>
         </div>
           </> : 
         // destop&tablet
@@ -152,22 +142,9 @@ const descBasketballPlayer = [
           <div className='image-basketball'>
             <img src={basketballMobile} alt="basketballMobile"/>
           </div>
-            <div className='container-desc'>
-            <div className='wrapper-title-desc'>
-              <div className="title-id">
-                {descBasketballPlayer[2].id}
-              </div>
-              <div className="title-desc">
-                {descBasketballPlayer[2].title}
-              </div>
-              </div>
-            <div className="desc">
-                {descBasketballPlayer[2].desc}
-            </div>
-          </div>
-          <div className="swiper">
-          <img src={paginationBasketBall} alt="paginationBasketBall" className='swiper-image'/>
-          </div>
+          <Slider data={descBasketballPlayer}/>
+          <>
+          </>
           </div>
           </>
          : 

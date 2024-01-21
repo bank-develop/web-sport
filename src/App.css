@@ -3,6 +3,9 @@
     height: 100%;
     font-family: 'Roboto', sans-serif;
 }
+:root {
+    --swiper-theme-color: #603EBE !important;
+}
 @media screen and (min-width: 1312px) {
     /* CSS that should be displayed if width is equal to or less than 800px goes here */
     .margin-left-content{
