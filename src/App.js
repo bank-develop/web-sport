@@ -3,8 +3,6 @@ import React  from 'react';
 
 import rugbyMobile from './asset/image/mobile/rugby.png'
 import basketballMobile from './asset/image/mobile/basketball.png'
-import paginationBasketBall from './asset/image/mobile/pagination-basketbal.png'
-import paginationRugby from './asset/image/mobile/pagination-rugby.png'
 import rugbyTablet  from './asset/image/tablet/rugby-tablet.png'
 import basketballTablet  from './asset/image/tablet/basketball-tablet.png'
 import basketballDesktop  from './asset/image/desktop/basketball-desktop.png'
