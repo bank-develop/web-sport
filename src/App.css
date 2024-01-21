@@ -3,18 +3,212 @@
     height: 100%;
     font-family: 'Roboto', sans-serif;
 }
-@media (max-width: 1920px) {
+@media screen and (min-width: 1312px) {
     /* CSS that should be displayed if width is equal to or less than 800px goes here */
+    .margin-left-content{
+        margin-left:50px;
+    }
+    .margin-rigth-content{
+        margin-right:50px;
+    }
+    .container-app{
+        margin: 0px 150px;
+    }
+    .container-desc{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        place-items: flex-start;
+    }
+    .container-rugby-player,.container-basketball-player{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 250px 250px;
+    }
     .top-header{
-        margin-top: 100px;
+        margin-top: 0px;   
+    }
+    .titlePlayer{
+        font-size: 90px;
+        font-weight: 400;
+        color: #E7E7E7;
+        padding-top:100px;
+    }
+    .image-rugby{
+        position: relative;
+        z-index: 50;
+        top: 50px;
+        width: 90%;
+        left: -4px;
+        min-width: 700px;
+    }
+    .image-basketball{
+        position: relative;
+        z-index: 50;
+        top: 25px;
+        width: 120%;
+        left: -190px;
+        min-width: 700px;
+
+    }
+    .wrapper-title-desc{
+        height: 42px;
+        display: flex;
+    }
+    .title-id{
+        font-size: 18px;
+        font-weight: 400;
+        color: #000000;
+        box-shadow: 0 24.09px 0 0 #603EBE;
+        height: 5px;
+        border-radius: 4px;
+        letter-spacing: 1.5px;
+        margin-top: 6px;
+        line-height: 21.09px;
+        margin-right: 10px;
+    }
+    .rugby-box-shadow-higth-ligth{
+        box-shadow: 0 24.09px 0 0 #FFFFFF;
+    }
+    .rugby-desc-higth-ligth{
+        color:#FFFFFF;
+    }
+    .title-desc{
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 42.19px;
+        letter-spacing: 1.5px;
+        color:#C2C2C2
+    }
+    .desc{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-top: 15px;
+    }
+    .rugby-bg-higthlight{
+        background-color: #5E3DB3;
+        padding: 45px 200px;
+        margin: 0 -150px;
+    }
+    .basketball-box-shadow-higth-ligth{
+        box-shadow: 0 24.09px 0 0 #FFFFFF;
+        color:#5E3DB3
+    }
+    .basketball-desc-higth-ligth{
+        color:#FFFFFF;
+    }
+    .basketball-bg-higthlight{
+        background-color: #090C35;
+        padding: 45px 200px;
+        margin: 0 -150px;
     }
   }
-  @media (max-width: 1311px) {
-    .top-header{
-        margin-top: 50px;
+  @media screen and (min-device-width: 731px) and (max-width: 1312px)  {
+    .margin-left-content{
+        margin-left:30px;
     }
+    .margin-rigth-content{
+        margin-right:30px;
+    }
+    .container-app{
+        margin: 0px 30px;
+    }
+    .container-rugby-player,.container-basketball-player{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+    }
+    .top-header{
+        margin-top: 0px;   
+    }
+    .titlePlayer{
+        font-size: 90px;
+        /* line-height: 105.47; */
+        font-weight: 400;
+        color: #E7E7E7;
+        padding:50px 0px
+    }
+    .image-rugby{
+        position: relative;
+        z-index: 50;
+        top: 50px;
+        width: 70%;
+        min-width: 400px;
+        left: -30px;
+    }
+    .image-basketball{
+        position: relative;
+        z-index: 50;
+        top: 50px;
+        width: 100%;
+        left: 30px;
+        min-width: 400px;
+    }
+    .wrapper-title-desc{
+        height: 42px;
+        display: flex;
+    }
+    .title-id{
+        font-size: 18px;
+        font-weight: 400;
+        color: #000000;
+        box-shadow: 0 24.09px 0 0 #603EBE;
+        height: 5px;
+        border-radius: 4px;
+        letter-spacing: 1.5px;
+        margin-top: 6px;
+        line-height: 21.09px;
+        margin-right: 10px;
+    }
+    .rugby-box-shadow-higth-ligth{
+        box-shadow: 0 24.09px 0 0 #FFFFFF;
+    }
+    .rugby-desc-higth-ligth{
+        color:#FFFFFF;
+    }
+    .title-desc{
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 42.19px;
+        letter-spacing: 1.5px;
+        color:#C2C2C2
+    }
+    .desc{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-top: 15px;
+    } 
+    .rugby-bg-higthlight{
+        background-color: #5E3DB3;
+        padding: 30px 60px;
+        margin: 0 -30px;
+    }
+    .basketball-box-shadow-higth-ligth{
+        box-shadow: 0 24.09px 0 0 #FFFFFF;
+        color:#5E3DB3
+    }
+    .basketball-desc-higth-ligth{
+        color:#FFFFFF;
+    }
+    .basketball-bg-higthlight{
+        background-color: #090C35;
+        padding: 30px 60px;
+        margin: 0 -30px;
+    }
+    .container-desc{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        place-items: flex-start;
+    }
+
   }
   @media (max-width: 730px) {
+    .container-rugby-player{
+        display: block;
+    }
     .container-app{
         padding:0px 20px;
     }
