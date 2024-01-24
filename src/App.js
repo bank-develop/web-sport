@@ -1,4 +1,5 @@
 import './App.css';
+
 import React  from 'react';
 
 import rugbyMobile from './asset/image/mobile/rugby.png'
@@ -11,10 +12,9 @@ import { useMediaQuery } from 'react-responsive';
 import Slider from './components/Slider';
 
 function App() {
-  const isDesktop = useMediaQuery({ minWidth: 1313 });
-  const isTablet = useMediaQuery({ minWidth:731, maxWidth: 1312});
-  const isMobile = useMediaQuery({ maxWidth: 730 });
-
+  const isDesktop = useMediaQuery({ minWidth: 1029 });
+  const isTablet = useMediaQuery({ minWidth:769, maxWidth:  1028});
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const titlePlayer ={
     rugby:"ATHLETS",
     basketball:"PLAYERS"
@@ -56,151 +56,114 @@ const descBasketballPlayer = [
   
   return (
     <div className="App">
-      
-      {/* <BasketballPlayer/>
-      <RugbyPlayer /> */}
-      <div className="container-app">
-      <div className="top-header">
-        {/* rugby */}
-          {/* titlePlayer */}
-          {isMobile ? 
-          <>
-            <div className="container-rugby-player">
-             <div className='titlePlayer'>
-            {titlePlayer.rugby}
-          </div>
-          <div className='image-rugby'>
-            <img src={rugbyMobile} alt="rugbyMobile" />
-          </div>
-          <Slider data={desRugbyPlayer}/>
-          <>
-          </>
-        </div>
-          </> : 
-        // destop&tablet
-          <>
-            <div className="container-rugby-player">
-            {isDesktop ? <img src={rugbyDesktop} alt="rugbyDesktop" className='image-rugby' /> :''}
-            {isTablet ? <img src={rugbyTablet} alt="rugbyTablet" className='image-rugby' /> :''}
-             <div className='titlePlayer margin-left-content'>
-            {titlePlayer.rugby}
-          </div>
-          <div><></></div>
-          <div className='container-desc margin-left-content'>
-            <div className='wrapper-title-desc'>
-              <div className="title-id">
-                {desRugbyPlayer[0].id}
+      <div className="position-main">
+        <div className="main">
+            <div className='content-rugby'>
+              <div className='container-image-rugby'>
+              {isDesktop ? <img src={rugbyDesktop} alt="rugbyDesktop" className='image-rugby' /> :''}
+              {isTablet ? <img src={rugbyTablet} alt="rugbyTablet" className='image-rugby' /> :''}
+              {isMobile ? <img src={rugbyMobile} alt="rugbyMobile" className='image-rugby' /> :''}
+
               </div>
-              <div className="title-desc">
-                {desRugbyPlayer[0].title}
+              <div className='wrapper-contents'>
+                <div className="container-header">
+                <div className='header-title'>
+                  {titlePlayer.rugby}
+                </div>
+                </div>
+              {!isMobile ? <>
+                <div className='container-contents padding-content-first'>
+                  <div className='desciption-container'>
+                    <div className='container-desc'>
+                      <div className='wrapper-title-desc'>
+                        <div className="title-id">{desRugbyPlayer[0].id}</div>
+                        <div className="title-desc">{desRugbyPlayer[0].title}</div>
+                      </div>
+                      <div className="desc">{desRugbyPlayer[0].desc}</div>
+                    </div>
+                  </div>
+                </div>
+                <div className='container-contents padding-content-secound bg-secound'>
+                  <div className='desciption-container'>
+                    <div className='container-desc'>
+                      <div className='wrapper-title-desc'>
+                        <div className="title-id">{desRugbyPlayer[1].id}</div>
+                        <div className="title-desc">{desRugbyPlayer[1].title}</div>
+                      </div>
+                      <div className="desc">{desRugbyPlayer[1].desc}</div>
+                    </div>
+                  </div>
+                </div>
+                <div className='container-contents padding-content-third bg-third'>
+                  <div className='desciption-container'>
+                    <div className='container-desc'>
+                      <div className='wrapper-title-desc'>
+                        <div className="title-id shadow-white">{desRugbyPlayer[2].id}</div>
+                        <div className="title-desc">{desRugbyPlayer[2].title}</div>
+                      </div>
+                      <div className="desc text-white">{desRugbyPlayer[2].desc}</div>
+                    </div>
+                  </div>
+                </div>
+              </> : 
+              <Slider data={desRugbyPlayer}/>
+              }
               </div>
+            </div>
+
+            <div className='content-basketball'>
+            <div className='container-image-basketball'>
+              {isDesktop ? <img src={basketballDesktop} alt="basketballDesktop" className='image-basketball' /> :''}
+              {isTablet ? <img src={basketballTablet} alt="basketballTablet" className='image-basketball' /> :''}
+              {isMobile ? <img src={basketballMobile} alt="basketballMobile" className='image-basketball' /> :''}
               </div>
-            <div className="desc">
-                {desRugbyPlayer[0].desc}
+            </div>
+            <div className='wrapper-basketball-content'>
+            <div className='container-basketball-contents'>
+              <div className="container-header-bkb  padding-header-bkb">
+                <div className='header-title-bkb'>
+                  {titlePlayer.basketball}
+                </div>
+              </div>
+            {!isMobile ? <>
+              <div className='container-contents-bkb padding-content-bkb-first'>
+                  <div className='desciption-container-bkb'>
+                    <div className='container-desc-bkb'>
+                      <div className='wrapper-title-desc'>
+                        <div className="title-id">{descBasketballPlayer[0].id}</div>
+                        <div className="title-desc">{descBasketballPlayer[0].title}</div>
+                      </div>
+                      <div className="desc">{descBasketballPlayer[0].desc}</div>
+                    </div>
+                  </div>
+              </div>
+              <div className='container-contents-bkb padding-content-bkb-secound bg-secound-bkb'>
+                  <div className='desciption-container-bkb'>
+                    <div className='container-desc-bkb'>
+                      <div className='wrapper-title-desc'>
+                        <div className="title-id">{descBasketballPlayer[1].id}</div>
+                        <div className="title-desc">{descBasketballPlayer[1].title}</div>
+                      </div>
+                      <div className="desc">{descBasketballPlayer[1].desc}</div>
+                    </div>
+                  </div>
+                </div>
+              <div className='container-contents-bkb padding-content-third-bkb bg-third-bkb'>
+                  <div className='desciption-container-bkb'>
+                    <div className='container-desc-bkb max-width-none'>
+                      <div className='wrapper-title-desc'>
+                        <div className="title-id shadow-purple">{descBasketballPlayer[2].id}</div>
+                        <div className="title-desc">{descBasketballPlayer[2].title}</div>
+                      </div>
+                      <div className="desc text-white">{descBasketballPlayer[2].desc}</div>
+                    </div>
+                  </div>
+              </div>
+              </> : <Slider data={descBasketballPlayer}/>}
             </div>
           </div>
-          <div><></></div>
-          <div className='container-desc  margin-left-content'>
-            <div className='wrapper-title-desc'>
-              <div className="title-id">
-                {desRugbyPlayer[1].id}
-              </div>
-              <div className="title-desc">
-                {desRugbyPlayer[1].title}
-              </div>
-              </div>
-            <div className="desc">
-                {desRugbyPlayer[1].desc}
-            </div>
-          </div>
-          <div className='rugby-bg-higthlight'><></></div>
-          <div className='container-desc rugby-bg-higthlight'>
-            <div className='wrapper-title-desc'>
-              <div className="title-id rugby-box-shadow-higth-ligth">
-                {desRugbyPlayer[2].id}
-              </div>
-              <div className="title-desc">
-                {desRugbyPlayer[2].title}
-              </div>
-              </div>
-            <div className="desc rugby-desc-higth-ligth">
-                {desRugbyPlayer[2].desc}
-            </div>
-          </div>
-
         </div>
-          </>}
-
-        {/* basketball */}
-          {isMobile ? <>
-            <div className="container-basketball-player">
-        <div className='titlePlayer'>
-            {titlePlayer.basketball}
-          </div>
-          <div className='image-basketball'>
-            <img src={basketballMobile} alt="basketballMobile"/>
-          </div>
-          <Slider data={descBasketballPlayer}/>
-          <>
-          </>
-          </div>
-          </>
-         : 
-         <>
-        {/* // destop&tablet */}
-        <div className="container-basketball-player">
-          <div className='titlePlayer  margin-left-content'>
-            {titlePlayer.basketball}
-          </div>
-          {isDesktop ? <img src={basketballDesktop} alt="basketballDesktop" className='image-basketball' /> :''}          
-          {isTablet ? <img src={basketballTablet} alt="rugbyTablet" className='image-basketball' /> :''}          
-         <div className='container-desc  margin-left-content'>
-         <div className='wrapper-title-desc'>
-           <div className="title-id ">
-             {descBasketballPlayer[0].id}
-           </div>
-           <div className="title-desc">
-             {descBasketballPlayer[0].title}
-           </div>
-           </div>
-         <div className="desc">
-             {descBasketballPlayer[0].desc}
-         </div>
-       </div>
-       <div><></></div>
-       <div className='container-desc  margin-left-content'>
-         <div className='wrapper-title-desc'>
-           <div className="title-id">
-             {descBasketballPlayer[1].id}
-           </div>
-           <div className="title-desc">
-             {descBasketballPlayer[1].title}
-           </div>
-           </div>
-         <div className="desc">
-             {descBasketballPlayer[1].desc}
-         </div>
-       </div>
-       <div><></></div>
-       <div className='container-desc basketball-bg-higthlight'>
-         <div className='wrapper-title-desc'>
-           <div className="title-id  basketball-box-shadow-higth-ligth">
-             {descBasketballPlayer[2].id}
-           </div>
-           <div className="title-desc">
-             {descBasketballPlayer[2].title}
-           </div>
-           </div>
-         <div className="desc basketball-desc-higth-ligth ">
-             {descBasketballPlayer[2].desc}
-         </div>
-       </div>
-       <div className='basketball-bg-higthlight'><></></div>
-       </div>
-       </>}
-
         </div>
-      </div>
     </div>
   );
 }
